@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5 {
 
 p {
     line-height: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .container {
@@ -154,7 +154,7 @@ nav a {
 }
 
 .bottom-content .text-container {
-    padding-right: 4%;
+    padding-right: 6%;
 }
 
 .bottom-content .text-container:last-child {
@@ -176,6 +176,7 @@ footer nav {
 }
 
 footer nav a {
+    margin: 0;
     color: white;
     text-decoration: none;
 }
