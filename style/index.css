@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -54,39 +54,175 @@ table {
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
     font-family: 'Rubik', sans-serif;
 }
 
 p {
-    line-height: 1.4;
+    line-height: 2rem;
+    font-size: 1.6rem;
+}
+
+@media (max-width: 500px) {
+
+}
+
+@media (max-width: 800px) {
+
 }
 
 .container {
-    width: 800px;
+    width: 95%;
+    max-width: 80rem;
     margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+}
+
+header {
+    display: flex;
+    margin: 2rem 0 4rem 0;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2.1rem;
+    }
+
+    header img {
+        width: 15rem;
+        margin-bottom: 4.8rem;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #product-nav {
+        display: none;
+    }
+}
+
+nav a {
+    margin: 0 6%;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 800px) {
+    header nav a {
+        background-image: linear-gradient(#fff, #bebebe);
+        border-radius: 5px;
+        border: 1px solid #a2a2a2;
+        width: 25rem;
+        margin: 0;
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+}
+
+.jumbo {
+    margin-bottom: 25px;
+}
+
+.jumbo img {
+    max-width: 80rem;
+    width: 100%;
+    transform: scale(1.0);
+    transition: all 0.5s ease-in-out;
+}
+
+.jumbo img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 800px) {
+    .jumbo {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    .jumbo img {
+        height: 18rem;
+    }
+}
+
+.form-container {
+    margin: 1rem 0;
+}
+form {
+    font-size: 1.8rem;
+}
+
+.form-submit {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: none;
 }
 
 .top-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     border-bottom: 1px dashed black;
+}
+@media (max-width: 500px) {
+    .top-content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 2rem;
 }
 
+@media (max-width: 800px) {
+    .top-content .text-container {
+        width: 95%;
+    }
+
+    .top-content .text-container h2 {
+        font-size: 2.3rem;
+    }
+
+    .top-content .text-container p {
+        line-height: 2rem;
+        font-size: 1.3rem;
+        color: #767676;
+    }
+}
+
+
 .middle-content {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     border-bottom: 1px dashed black;
 }
 
@@ -95,10 +231,26 @@ p {
     margin-bottom: 0;
 }
 
+@media (max-width: 800px) {
+    .middle-content h2 {
+        text-align: center;
+    }
+}
+
 .middle-content .boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .middle-content .boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+    }
 }
 
 .middle-content .boxes .box {
@@ -112,14 +264,60 @@ p {
     justify-content: center;
 }
 
+@media (max-width: 800px) {
+    .middle-content .boxes .box {
+        width: 23%;
+        height: 111px;
+        margin: 0.75rem 0;
+    }
+}
+
+#box1 { background-color: teal; }
+#box2 { background-color: gold; }
+#box3 { background-color: cadetblue; }
+#box4 { background-color: coral; }
+#box5 { background-color: crimson; }
+#box6 { background-color: forestgreen; }
+#box7 { background-color: darkorchid; }
+#box8 { background-color: hotpink; }
+#box9 { background-color: indigo; }
+#box10 { background-color: dodgerblue; }
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
     justify-content: space-around;
 }
 
+@media (max-width: 800px) {
+    .bottom-content {
+        display: flex;
+        flex-direction: column;
+        margin: 0 2% 20px;
+        justify-content: space-around;
+    }
+}
+
 .bottom-content .text-container {
-    padding-right: 4%;
+    padding-right: 6%;
+}
+
+@media (max-width: 800px) {
+    .bottom-content .text-container {
+        width: 95%;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .bottom-content .text-container h2 {
+        margin-bottom: 0.6rem;
+    }
+
+    .bottom-content .text-container p {
+        line-height: 2rem;
+        font-size: 1.3rem;
+        color: #767676;
+    }
 }
 
 .bottom-content .text-container:last-child {
@@ -140,7 +338,21 @@ footer nav {
     font-size: 14px;
 }
 
+@media (max-width: 800px) {
+    footer nav {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
 footer nav a {
+    margin: 0;
     color: white;
     text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    footer nav a {
+        margin: 0.5rem 0;
+    }
 }
